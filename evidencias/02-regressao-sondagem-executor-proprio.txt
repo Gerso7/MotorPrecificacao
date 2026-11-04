@@ -1,0 +1,60 @@
+=== 2295cdf (2026-05-21)
+  INCOMPATIVEL unit.CalculoPopularTest
+  INCOMPATIVEL unit.CalculoLuxoTest
+  INCOMPATIVEL unit.PedidoBuilderTest
+  INCOMPATIVEL unit.PedidoTest
+  INCOMPATIVEL integration.CorridaPipelineTest
+  FAIL I06_main_imprimeValorEmReaisComDuasCasas -> java.lang.AssertionError: Saida inesperada do Main: 28.75
+  => passaram=8 falharam=1 classes_incompativeis=5
+=== 741b017 (2026-05-23)
+  INCOMPATIVEL unit.CalculoPopularTest
+  INCOMPATIVEL unit.CalculoLuxoTest
+  INCOMPATIVEL unit.PedidoBuilderTest
+  FAIL U09_categoriaNula_deveSerRejeitada -> java.lang.AssertionError: expected IllegalArgumentException but n
+  INCOMPATIVEL integration.CorridaPipelineTest
+  FAIL I06_main_imprimeValorEmReaisComDuasCasas -> java.lang.AssertionError: Saida inesperada do Main: 28.75
+  => passaram=8 falharam=2 classes_incompativeis=4
+=== c4d6ac2 (2026-05-24)
+PRODUCAO NAO COMPILA: builder/PedidoBuilder.java:41: error: reached end of file while parsing
+=== 3fc40c2 (2026-05-24)
+PRODUCAO NAO COMPILA: builder/PedidoBuilder.java:41: error: reached end of file while parsing
+=== 31664f3 (2026-05-24)
+  FAIL U05_entradaNegativa_deveSerRejeitada -> java.lang.AssertionError: expected IllegalArgumentException but
+  FAIL U08_distanciaNula_deveLancarIllegalArgumentException -> java.lang.AssertionError: expected IllegalArgum
+  FAIL U09_categoriaNula_deveSerRejeitada -> java.lang.AssertionError: expected IllegalArgumentException but n
+  FAIL I02_luxo_chuvaEPico_10km_20min -> java.lang.AssertionError: Tarifa deveria estar arredondada em centavo
+  FAIL I05_pedidoInvalido_naoDeveGerarTarifaNegativa -> java.lang.AssertionError: expected IllegalArgumentExce
+  FAIL I06_main_imprimeValorEmReaisComDuasCasas -> java.lang.AssertionError: Saida inesperada do Main: -- Test
+  => passaram=17 falharam=6 classes_incompativeis=0
+=== 6f8c7c7 (2026-05-25)
+  INCOMPATIVEL unit.CalculoPopularTest
+  INCOMPATIVEL unit.CalculoLuxoTest
+  FAIL U08_distanciaNula_deveLancarIllegalArgumentException -> java.lang.AssertionError: expected IllegalArgum
+  FAIL U09_categoriaNula_deveSerRejeitada -> java.lang.AssertionError: expected IllegalArgumentException but n
+  INCOMPATIVEL integration.CorridaPipelineTest
+  FAIL I06_main_imprimeValorEmReaisComDuasCasas -> java.lang.AssertionError: Saida inesperada do Main: 28.75
+  => passaram=10 falharam=3 classes_incompativeis=3
+=== 6accfba (2026-05-26)
+  FAIL U05_entradaNegativa_deveSerRejeitada -> java.lang.AssertionError: expected IllegalArgumentException but
+  FAIL U08_distanciaNula_deveLancarIllegalArgumentException -> java.lang.AssertionError: expected IllegalArgum
+  FAIL U09_categoriaNula_deveSerRejeitada -> java.lang.AssertionError: expected IllegalArgumentException but n
+  FAIL I02_luxo_chuvaEPico_10km_20min -> java.lang.AssertionError: Tarifa deveria estar arredondada em centavo
+  FAIL I05_pedidoInvalido_naoDeveGerarTarifaNegativa -> java.lang.AssertionError: expected IllegalArgumentExce
+  FAIL I06_main_imprimeValorEmReaisComDuasCasas -> java.lang.AssertionError: Saida inesperada do Main: -- Test
+  => passaram=17 falharam=6 classes_incompativeis=0
+=== 42bbb5e (2026-05-26)
+  FAIL U05_entradaNegativa_deveSerRejeitada -> java.lang.AssertionError: expected IllegalArgumentException but
+  FAIL U08_distanciaNula_deveLancarIllegalArgumentException -> java.lang.AssertionError: expected IllegalArgum
+  FAIL U09_categoriaNula_deveSerRejeitada -> java.lang.AssertionError: expected IllegalArgumentException but n
+  FAIL I02_luxo_chuvaEPico_10km_20min -> java.lang.AssertionError: Tarifa deveria estar arredondada em centavo
+  FAIL I05_pedidoInvalido_naoDeveGerarTarifaNegativa -> java.lang.AssertionError: expected IllegalArgumentExce
+  FAIL I06_main_imprimeValorEmReaisComDuasCasas -> java.lang.AssertionError: Saida inesperada do Main: -- Test
+  => passaram=17 falharam=6 classes_incompativeis=0
+=== d645b6d (2026-05-30)
+  FAIL U05_entradaNegativa_deveSerRejeitada -> java.lang.AssertionError: expected IllegalArgumentException but
+  FAIL U08_distanciaNula_deveLancarIllegalArgumentException -> java.lang.AssertionError: expected IllegalArgum
+  FAIL U09_categoriaNula_deveSerRejeitada -> java.lang.AssertionError: expected IllegalArgumentException but n
+  FAIL I02_luxo_chuvaEPico_10km_20min -> java.lang.AssertionError: Tarifa deveria estar arredondada em centavo
+  FAIL I05_pedidoInvalido_naoDeveGerarTarifaNegativa -> java.lang.AssertionError: expected IllegalArgumentExce
+  FAIL I06_main_imprimeValorEmReaisComDuasCasas -> java.lang.AssertionError: Saida inesperada do Main: -- Test
+  => passaram=17 falharam=6 classes_incompativeis=0

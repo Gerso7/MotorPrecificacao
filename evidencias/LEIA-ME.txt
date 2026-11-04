@@ -1,0 +1,4 @@
+Evidencias geradas SEM Maven Central (bloqueado no ambiente de preparo).
+Os arquivos 02-* vieram de um executor proprio que imita JUnit (stubs de @Test e Assertions).
+Para a entrega oficial, rodar na sua maquina:  mvn test   (e conferir target/site/jacoco/index.html)
+e substituir/anexar a saida real em evidencias/.
