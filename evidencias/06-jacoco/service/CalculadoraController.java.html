@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="UTF-8"?><!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd"><html xmlns="http://www.w3.org/1999/xhtml" lang="pt"><head><meta http-equiv="Content-Type" content="text/html;charset=UTF-8"/><link rel="stylesheet" href="../jacoco-resources/report.css" type="text/css"/><link rel="shortcut icon" href="../jacoco-resources/report.gif" type="image/gif"/><title>CalculadoraController.java</title><link rel="stylesheet" href="../jacoco-resources/prettify.css" type="text/css"/><script type="text/javascript" src="../jacoco-resources/prettify.js"></script></head><body onload="window['PR_TAB_WIDTH']=4;prettyPrint()"><div class="breadcrumb" id="breadcrumb"><span class="info"><a href="../jacoco-sessions.html" class="el_session">Sessions</a></span><a href="../index.html" class="el_report">motor-precificacao-qa</a> &gt; <a href="index.source.html" class="el_package">service</a> &gt; <span class="el_source">CalculadoraController.java</span></div><h1>CalculadoraController.java</h1><pre class="source lang-java linenums">package service;
+
+import model.Pedido;
+import model.TipoCategoria;
+import strategy.EstrategiaPrecificacao;
+import strategy.CalculoPopular;
+import strategy.CalculoLuxo;
+import decorator.Tarifa;
+import decorator.TarifaBase;
+import decorator.ChuvaDecorator;
+import decorator.PicoDecorator;
+
+<span class="fc" id="L13">public class CalculadoraController {</span>
+
+    public double processarCorrida(Pedido pedido) {
+        
+        EstrategiaPrecificacao estrategia;
+<span class="fc bfc" id="L18" title="All 2 branches covered.">        if (pedido.getTipoCategoria() == TipoCategoria.LUXO) {</span>
+<span class="fc" id="L19">            estrategia = new CalculoLuxo();</span>
+        } else {
+<span class="fc" id="L21">            estrategia = new CalculoPopular();</span>
+        }
+        
+<span class="fc" id="L24">        double precoFrio = estrategia.calcularTarifaBase(pedido);</span>
+
+<span class="fc" id="L26">        Tarifa tarifaFinal = new TarifaBase(precoFrio);</span>
+
+<span class="fc bfc" id="L28" title="All 2 branches covered.">        if (pedido.isEstaChovendo()) {</span>
+<span class="fc" id="L29">            tarifaFinal = new ChuvaDecorator(tarifaFinal);</span>
+        }
+
+<span class="fc bfc" id="L32" title="All 2 branches covered.">        if (pedido.isHorarioPico()) {</span>
+<span class="fc" id="L33">            tarifaFinal = new PicoDecorator(tarifaFinal);</span>
+        }
+
+<span class="fc" id="L36">        return tarifaFinal.calcular();</span>
+    }
+}
+</pre><div class="footer"><span class="right">Created with <a href="http://www.jacoco.org/jacoco">JaCoCo</a> 0.8.13.202504020838</span></div></body></html>

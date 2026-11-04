@@ -1,0 +1,15 @@
+-------------------------------------------------------------------------------
+Test set: unit.CalculoPopularTest
+-------------------------------------------------------------------------------
+Tests run: 3, Failures: 1, Errors: 0, Skipped: 0, Time elapsed: 0.003 s <<< FAILURE! -- in unit.CalculoPopularTest
+unit.CalculoPopularTest.U05_entradaNegativa_deveSerRejeitada -- Time elapsed: 0.001 s <<< FAILURE!
+org.opentest4j.AssertionFailedError: Expected java.lang.IllegalArgumentException to be thrown, but nothing was thrown.
+	at org.junit.jupiter.api.AssertionFailureBuilder.build(AssertionFailureBuilder.java:152)
+	at org.junit.jupiter.api.AssertThrows.assertThrows(AssertThrows.java:73)
+	at org.junit.jupiter.api.AssertThrows.assertThrows(AssertThrows.java:35)
+	at org.junit.jupiter.api.Assertions.assertThrows(Assertions.java:3128)
+	at unit.CalculoPopularTest.U05_entradaNegativa_deveSerRejeitada(CalculoPopularTest.java:32)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:580)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1596)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1596)
+

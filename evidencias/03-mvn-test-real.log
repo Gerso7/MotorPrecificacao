@@ -1,0 +1,158 @@
+[INFO] Scanning for projects...
+[INFO] 
+[INFO] ----------------------< qa:motor-precificacao-qa >----------------------
+[INFO] Building motor-precificacao-qa 1.0
+[INFO]   from pom.xml
+[INFO] --------------------------------[ jar ]---------------------------------
+[INFO] Loaded 24368 auto-discovered prefixes for remote repository central (prefixes-central.txt)
+[INFO] Loaded 64 auto-discovered prefixes for remote repository apache.snapshots (prefixes-apache.snapshots.txt)
+[INFO] 
+[INFO] --- clean:3.5.0:clean (default-clean) @ motor-precificacao-qa ---
+[INFO] 
+[INFO] --- jacoco:0.8.13:prepare-agent (default) @ motor-precificacao-qa ---
+[INFO] argLine set to -javaagent:C:\\Users\\ferra\\.m2\\repository\\org\\jacoco\\org.jacoco.agent\\0.8.13\\org.jacoco.agent-0.8.13-runtime.jar=destfile=C:\\Users\\ferra\\AppData\\Local\\Temp\\claude\\5f461d560474fabe\\84f20fdd-a017-4933-9e6c-ff495145d434\\scratchpad\\run\\target\\jacoco.exec
+[INFO] 
+[INFO] --- resources:3.5.0:resources (default-resources) @ motor-precificacao-qa ---
+[INFO] skip non existing resourceDirectory C:\Users\ferra\AppData\Local\Temp\claude\5f461d560474fabe\84f20fdd-a017-4933-9e6c-ff495145d434\scratchpad\run\src\main\resources
+[INFO] 
+[INFO] --- compiler:3.13.0:compile (default-compile) @ motor-precificacao-qa ---
+[INFO] Recompiling the module because of changed source code.
+[INFO] Compiling 14 source files with javac [debug release 21] to target\classes
+[INFO] 
+[INFO] --- build-helper:3.6.0:add-test-source (add-qa-tests) @ motor-precificacao-qa ---
+[INFO] Test Source directory: C:\Users\ferra\AppData\Local\Temp\claude\5f461d560474fabe\84f20fdd-a017-4933-9e6c-ff495145d434\scratchpad\run\tests added.
+[INFO] 
+[INFO] --- resources:3.5.0:testResources (default-testResources) @ motor-precificacao-qa ---
+[INFO] skip non existing resourceDirectory C:\Users\ferra\AppData\Local\Temp\claude\5f461d560474fabe\84f20fdd-a017-4933-9e6c-ff495145d434\scratchpad\run\src\test\resources
+[INFO] 
+[INFO] --- compiler:3.13.0:testCompile (default-testCompile) @ motor-precificacao-qa ---
+[INFO] Recompiling the module because of changed dependency.
+[INFO] Compiling 8 source files with javac [debug release 21] to target\test-classes
+[INFO] 
+[INFO] --- surefire:3.5.2:test (default-test) @ motor-precificacao-qa ---
+[INFO] Using auto detected provider org.apache.maven.surefire.junitplatform.JUnitPlatformProvider
+[INFO] 
+[INFO] -------------------------------------------------------
+[INFO]  T E S T S
+[INFO] -------------------------------------------------------
+[INFO] Running integration.CorridaPipelineTest
+[ERROR] Tests run: 5, Failures: 2, Errors: 0, Skipped: 0, Time elapsed: 0.075 s <<< FAILURE! -- in integration.CorridaPipelineTest
+[ERROR] integration.CorridaPipelineTest.I05_pedidoInvalido_naoDeveGerarTarifaNegativa -- Time elapsed: 0.007 s <<< FAILURE!
+org.opentest4j.AssertionFailedError: Expected java.lang.IllegalArgumentException to be thrown, but nothing was thrown.
+	at org.junit.jupiter.api.AssertionFailureBuilder.build(AssertionFailureBuilder.java:152)
+	at org.junit.jupiter.api.AssertThrows.assertThrows(AssertThrows.java:73)
+	at org.junit.jupiter.api.AssertThrows.assertThrows(AssertThrows.java:35)
+	at org.junit.jupiter.api.Assertions.assertThrows(Assertions.java:3128)
+	at integration.CorridaPipelineTest.I05_pedidoInvalido_naoDeveGerarTarifaNegativa(CorridaPipelineTest.java:65)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:580)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1596)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1596)
+
+[ERROR] integration.CorridaPipelineTest.I02_luxo_chuvaEPico_10km_20min -- Time elapsed: 0.007 s <<< FAILURE!
+org.opentest4j.AssertionFailedError: Tarifa deveria estar arredondada em centavos, mas veio: 64.68749999999999 ==> expected: <64.69> but was: <64.68749999999999>
+	at org.junit.jupiter.api.AssertionFailureBuilder.build(AssertionFailureBuilder.java:151)
+	at org.junit.jupiter.api.AssertionFailureBuilder.buildAndThrow(AssertionFailureBuilder.java:132)
+	at org.junit.jupiter.api.AssertEquals.failNotEqual(AssertEquals.java:197)
+	at org.junit.jupiter.api.AssertEquals.assertEquals(AssertEquals.java:86)
+	at org.junit.jupiter.api.Assertions.assertEquals(Assertions.java:1024)
+	at integration.CorridaPipelineTest.I02_luxo_chuvaEPico_10km_20min(CorridaPipelineTest.java:33)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:580)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1596)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1596)
+
+[INFO] Running integration.MainSaidaTest
+[ERROR] Tests run: 1, Failures: 1, Errors: 0, Skipped: 0, Time elapsed: 0.007 s <<< FAILURE! -- in integration.MainSaidaTest
+[ERROR] integration.MainSaidaTest.I06_main_imprimeValorEmReaisComDuasCasas -- Time elapsed: 0.004 s <<< FAILURE!
+org.opentest4j.AssertionFailedError: 
+Saida inesperada do Main: -- Testando o Motor de Precificação --
+Preço final da corrida: R$ 64.68749999999999
+ ==> expected: <true> but was: <false>
+	at org.junit.jupiter.api.AssertionFailureBuilder.build(AssertionFailureBuilder.java:151)
+	at org.junit.jupiter.api.AssertionFailureBuilder.buildAndThrow(AssertionFailureBuilder.java:132)
+	at org.junit.jupiter.api.AssertTrue.failNotTrue(AssertTrue.java:63)
+	at org.junit.jupiter.api.AssertTrue.assertTrue(AssertTrue.java:36)
+	at org.junit.jupiter.api.Assertions.assertTrue(Assertions.java:214)
+	at integration.MainSaidaTest.I06_main_imprimeValorEmReaisComDuasCasas(MainSaidaTest.java:26)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:580)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1596)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1596)
+
+[INFO] Running test.TarifaTest
+[INFO] Tests run: 4, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.005 s -- in test.TarifaTest
+[INFO] Running unit.CalculoLuxoTest
+[INFO] Tests run: 2, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.002 s -- in unit.CalculoLuxoTest
+[INFO] Running unit.CalculoPopularTest
+[ERROR] Tests run: 3, Failures: 1, Errors: 0, Skipped: 0, Time elapsed: 0.003 s <<< FAILURE! -- in unit.CalculoPopularTest
+[ERROR] unit.CalculoPopularTest.U05_entradaNegativa_deveSerRejeitada -- Time elapsed: 0.001 s <<< FAILURE!
+org.opentest4j.AssertionFailedError: Expected java.lang.IllegalArgumentException to be thrown, but nothing was thrown.
+	at org.junit.jupiter.api.AssertionFailureBuilder.build(AssertionFailureBuilder.java:152)
+	at org.junit.jupiter.api.AssertThrows.assertThrows(AssertThrows.java:73)
+	at org.junit.jupiter.api.AssertThrows.assertThrows(AssertThrows.java:35)
+	at org.junit.jupiter.api.Assertions.assertThrows(Assertions.java:3128)
+	at unit.CalculoPopularTest.U05_entradaNegativa_deveSerRejeitada(CalculoPopularTest.java:32)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:580)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1596)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1596)
+
+[INFO] Running unit.DecoratorsTest
+[INFO] Tests run: 4, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.005 s -- in unit.DecoratorsTest
+[INFO] Running unit.PedidoBuilderTest
+[ERROR] Tests run: 3, Failures: 1, Errors: 0, Skipped: 0, Time elapsed: 0.005 s <<< FAILURE! -- in unit.PedidoBuilderTest
+[ERROR] unit.PedidoBuilderTest.U08_distanciaNula_deveLancarIllegalArgumentException -- Time elapsed: 0.001 s <<< FAILURE!
+org.opentest4j.AssertionFailedError: Unexpected exception type thrown, expected: <java.lang.IllegalArgumentException> but was: <java.lang.NullPointerException>
+	at org.junit.jupiter.api.AssertionFailureBuilder.build(AssertionFailureBuilder.java:151)
+	at org.junit.jupiter.api.AssertThrows.assertThrows(AssertThrows.java:67)
+	at org.junit.jupiter.api.AssertThrows.assertThrows(AssertThrows.java:35)
+	at org.junit.jupiter.api.Assertions.assertThrows(Assertions.java:3128)
+	at unit.PedidoBuilderTest.U08_distanciaNula_deveLancarIllegalArgumentException(PedidoBuilderTest.java:43)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:580)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1596)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1596)
+Caused by: java.lang.NullPointerException: Cannot invoke "java.lang.Double.doubleValue()" because "distanciaKm" is null
+	at builder.PedidoBuilder.comDistancia(PedidoBuilder.java:14)
+	at unit.PedidoBuilderTest.lambda$U08_distanciaNula_deveLancarIllegalArgumentException$0(PedidoBuilderTest.java:44)
+	at org.junit.jupiter.api.AssertThrows.assertThrows(AssertThrows.java:53)
+	... 6 more
+
+[INFO] Running unit.PedidoTest
+[ERROR] Tests run: 1, Failures: 1, Errors: 0, Skipped: 0, Time elapsed: 0.002 s <<< FAILURE! -- in unit.PedidoTest
+[ERROR] unit.PedidoTest.U09_categoriaNula_deveSerRejeitada -- Time elapsed: 0.002 s <<< FAILURE!
+org.opentest4j.AssertionFailedError: Expected java.lang.IllegalArgumentException to be thrown, but nothing was thrown.
+	at org.junit.jupiter.api.AssertionFailureBuilder.build(AssertionFailureBuilder.java:152)
+	at org.junit.jupiter.api.AssertThrows.assertThrows(AssertThrows.java:73)
+	at org.junit.jupiter.api.AssertThrows.assertThrows(AssertThrows.java:35)
+	at org.junit.jupiter.api.Assertions.assertThrows(Assertions.java:3128)
+	at unit.PedidoTest.U09_categoriaNula_deveSerRejeitada(PedidoTest.java:13)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:580)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1596)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1596)
+
+[INFO] 
+[INFO] Results:
+[INFO] 
+[ERROR] Failures: 
+[ERROR]   CorridaPipelineTest.I02_luxo_chuvaEPico_10km_20min:33 Tarifa deveria estar arredondada em centavos, mas veio: 64.68749999999999 ==> expected: <64.69> but was: <64.68749999999999>
+[ERROR]   CorridaPipelineTest.I05_pedidoInvalido_naoDeveGerarTarifaNegativa:65 Expected java.lang.IllegalArgumentException to be thrown, but nothing was thrown.
+[ERROR]   MainSaidaTest.I06_main_imprimeValorEmReaisComDuasCasas:26 Saida inesperada do Main: -- Testando o Motor de Precificação --
+Preço final da corrida: R$ 64.68749999999999
+ ==> expected: <true> but was: <false>
+[ERROR]   CalculoPopularTest.U05_entradaNegativa_deveSerRejeitada:32 Expected java.lang.IllegalArgumentException to be thrown, but nothing was thrown.
+[ERROR]   PedidoBuilderTest.U08_distanciaNula_deveLancarIllegalArgumentException:43 Unexpected exception type thrown, expected: <java.lang.IllegalArgumentException> but was: <java.lang.NullPointerException>
+[ERROR]   PedidoTest.U09_categoriaNula_deveSerRejeitada:13 Expected java.lang.IllegalArgumentException to be thrown, but nothing was thrown.
+[INFO] 
+[ERROR] Tests run: 23, Failures: 6, Errors: 0, Skipped: 0
+[INFO] 
+[ERROR] There are test failures.
+
+See C:\Users\ferra\AppData\Local\Temp\claude\5f461d560474fabe\84f20fdd-a017-4933-9e6c-ff495145d434\scratchpad\run\target\surefire-reports for the individual test results.
+See dump files (if any exist) [date].dump, [date]-jvmRun[N].dump and [date].dumpstream.
+[INFO] 
+[INFO] --- jacoco:0.8.13:report (report) @ motor-precificacao-qa ---
+[INFO] Loading execution data file C:\Users\ferra\AppData\Local\Temp\claude\5f461d560474fabe\84f20fdd-a017-4933-9e6c-ff495145d434\scratchpad\run\target\jacoco.exec
+[INFO] Analyzed bundle 'motor-precificacao-qa' with 12 classes
+[INFO] ------------------------------------------------------------------------
+[INFO] BUILD SUCCESS
+[INFO] ------------------------------------------------------------------------
+[INFO] Total time:  17.255 s
+[INFO] Finished at: 2026-11-04T18:52:42-03:00
+[INFO] ------------------------------------------------------------------------

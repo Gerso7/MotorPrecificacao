@@ -1,0 +1,2 @@
+-- Testando o Motor de Precificação --
+Preço final da corrida: R$ 64.68749999999999

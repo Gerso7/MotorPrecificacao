@@ -1,0 +1,27 @@
+-------------------------------------------------------------------------------
+Test set: integration.CorridaPipelineTest
+-------------------------------------------------------------------------------
+Tests run: 5, Failures: 2, Errors: 0, Skipped: 0, Time elapsed: 0.075 s <<< FAILURE! -- in integration.CorridaPipelineTest
+integration.CorridaPipelineTest.I05_pedidoInvalido_naoDeveGerarTarifaNegativa -- Time elapsed: 0.007 s <<< FAILURE!
+org.opentest4j.AssertionFailedError: Expected java.lang.IllegalArgumentException to be thrown, but nothing was thrown.
+	at org.junit.jupiter.api.AssertionFailureBuilder.build(AssertionFailureBuilder.java:152)
+	at org.junit.jupiter.api.AssertThrows.assertThrows(AssertThrows.java:73)
+	at org.junit.jupiter.api.AssertThrows.assertThrows(AssertThrows.java:35)
+	at org.junit.jupiter.api.Assertions.assertThrows(Assertions.java:3128)
+	at integration.CorridaPipelineTest.I05_pedidoInvalido_naoDeveGerarTarifaNegativa(CorridaPipelineTest.java:65)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:580)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1596)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1596)
+
+integration.CorridaPipelineTest.I02_luxo_chuvaEPico_10km_20min -- Time elapsed: 0.007 s <<< FAILURE!
+org.opentest4j.AssertionFailedError: Tarifa deveria estar arredondada em centavos, mas veio: 64.68749999999999 ==> expected: <64.69> but was: <64.68749999999999>
+	at org.junit.jupiter.api.AssertionFailureBuilder.build(AssertionFailureBuilder.java:151)
+	at org.junit.jupiter.api.AssertionFailureBuilder.buildAndThrow(AssertionFailureBuilder.java:132)
+	at org.junit.jupiter.api.AssertEquals.failNotEqual(AssertEquals.java:197)
+	at org.junit.jupiter.api.AssertEquals.assertEquals(AssertEquals.java:86)
+	at org.junit.jupiter.api.Assertions.assertEquals(Assertions.java:1024)
+	at integration.CorridaPipelineTest.I02_luxo_chuvaEPico_10km_20min(CorridaPipelineTest.java:33)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:580)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1596)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1596)
+

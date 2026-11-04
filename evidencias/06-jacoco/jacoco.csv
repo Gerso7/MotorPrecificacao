@@ -1,0 +1,13 @@
+GROUP,PACKAGE,CLASS,INSTRUCTION_MISSED,INSTRUCTION_COVERED,BRANCH_MISSED,BRANCH_COVERED,LINE_MISSED,LINE_COVERED,COMPLEXITY_MISSED,COMPLEXITY_COVERED,METHOD_MISSED,METHOD_COVERED
+motor-precificacao-qa,default,Main,3,32,0,0,1,12,1,1,1,1
+motor-precificacao-qa,decorator,ChuvaDecorator,0,10,0,0,0,3,0,2,0,2
+motor-precificacao-qa,decorator,TarifaBase,0,9,0,0,0,4,0,2,0,2
+motor-precificacao-qa,decorator,PicoDecorator,0,10,0,0,0,3,0,2,0,2
+motor-precificacao-qa,decorator,TarifaDecorator,0,6,0,0,0,3,0,1,0,1
+motor-precificacao-qa,service,CalculadoraSemPadrao,0,19,2,2,0,7,2,2,0,2
+motor-precificacao-qa,service,CalculadoraController,0,44,0,6,0,11,0,5,0,2
+motor-precificacao-qa,builder,PedidoBuilder,0,52,0,0,0,15,0,7,0,7
+motor-precificacao-qa,model,Pedido,0,33,0,0,0,12,0,6,0,6
+motor-precificacao-qa,model,TipoCategoria,0,15,0,0,0,3,0,1,0,1
+motor-precificacao-qa,strategy,CalculoLuxo,0,18,0,0,0,3,0,2,0,2
+motor-precificacao-qa,strategy,CalculoPopular,0,18,0,0,0,3,0,2,0,2
